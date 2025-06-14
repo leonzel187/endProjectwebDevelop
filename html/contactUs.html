@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" /> <!-- TODO: add meta description   -->
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- CSS -->
+    <!--<link href="styles/reset.css" rel="stylesheet" />-->
+    <link href="/styles/myStyle.css" rel="stylesheet" />
+    
+    <!-- Scripts -->
+    <script src="/jScripts/JavaScript.js" type="text/javascript">  </script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>צור קשר</h1>
+        </header>
+        <main>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">שם מלא*:</label>
+                    <input type="text" id="name" name="name" required placeholder="הכנס שם">
+                </div>
+                <div class="form-group">
+                    <label for="email">דואר אלקטרוני*:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">נושא*:</label>
+                    <input type="text" id="subject" name="subject" required placeholder="נושא הפנייה">
+                </div>
+                <div class="form-group">
+                    <label for="message">הודעה*:</label>
+                    <textarea id="message" name="message" required placeholder="כתוב כאן את ההודעה שלך..."></textarea>
+                </div>
+                <button type="submit">שלח</button>
+            </form>
+
+            <section id="confirmation" style="display:none;">
+                <h2>תודה!</h2>
+                <p>ההודעה נשלחה בהצלחה, נחזור אליך בהקדם.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

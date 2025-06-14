@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>טעויות נפוצות באילוף כלבים</title>
+    <link href="/styles/myStyle.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+    <h1>🐾 טעויות נפוצות באילוף כלבים</h1>
+    <p>כלבים הם חברים נאמנים, אבל חשוב לדעת איך לאמן אותם נכון! הנה טעויות שכדאי להימנע מהן:</p>
+
+    <!-- טעות 1 -->
+    <div class="mistake-card" onclick="toggleExplanation(this)">
+        <img src="/images/commonMistakes/1-4.png" height="500" width="702" alt="כלב מלקק לשון מול הרבה חטיפים"/> 
+        <div class="text">
+            <h2>1. ענישה במקום חיזוק חיובי</h2>
+            <div class="reminder">💡 לחץ לפרטים נוספים...</div>
+            <p class="explanation">
+                ענישה עלולה לגרום לפחד ולבלבול. במקום זה, כדאי לתגמל את הכלב כשמתנהג נכון – בעזרת מילה טובה, חטיף או ליטוף.
+            </p>
+        </div>
+    </div>
+
+    <!-- טעות 2 -->
+    <div class="mistake-card" onclick="toggleExplanation(this)">
+        <img src="/images/commonMistakes/1-2024-08-06T071733.936-850x478.jpg" height="478" width="850"  alt="כלב מבולבל" />
+        <div class="text">
+            <h2>2. חוסר עקביות</h2>
+            <div class="reminder">💡 לחץ לפרטים נוספים...</div>
+            <p class="explanation">
+                כשאחד מבני הבית מרשה לעלות לספה ואחר לא – הכלב מתבלבל. עקביות תעזור לו להבין את הכללים.
+            </p>
+        </div>
+    </div>
+
+    <!-- טעות 3 -->
+    <div class="mistake-card" onclick="toggleExplanation(this)">
+
+        <img src="/images/commonMistakes/border-collie-672634_1280.jpg" height="847" width="1280"   alt="כלב מתעייף באימון"           />
+        <div class="text">
+            <h2>3. אימון ממושך מדי</h2>
+            <div class="reminder">💡 לחץ לפרטים נוספים...</div>
+            <p class="explanation">
+                כלבים מתעייפים מהר. עדיף לקיים אימונים קצרים של 5-10 דקות מספר פעמים ביום, כדי לשמור על עניין ומיקוד.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleExplanation(card) {
+        const explanation = card.querySelector('.explanation');
+        explanation.style.display = (explanation.style.display === 'block') ? 'none' : 'block';
+    }
+</script>
+</body>
+</html>

@@ -1,4 +1,76 @@
-﻿body 
-{
-    direction:rtl;
+﻿body {
+    font-family: "Varela Round", sans-serif;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.container > p {
+    text-align: right;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.mistake-card {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fefefe;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.mistake-card:hover {
+    transform: scale(1.02);
+}
+
+.mistake-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.text {
+    padding: 20px;
+    flex-grow: 1;
+    direction: rtl;
+    text-align: right;
+}
+
+.text h2 {
+    margin: 0 0 5px;
+    color: #34495e;
+}
+
+.reminder {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.explanation {
+    display: none;
+    color: #555;
+    line-height: 1.5;
 }
