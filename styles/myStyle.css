@@ -1,76 +1,65 @@
-﻿body {
-    font-family: "Varela Round", sans-serif;
-    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+﻿{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
     direction: rtl;
+    background-color: #f4f4f4;
+    /* מוסיפים פדינג כדי שהתוכן לא ייסתר מתחת לניווט */
+    padding-top: 60px; /* כוונן בהתאם לגובה הניווט */
 }
 
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    text-align: right;
+/* ניווט ראשי מוצמד לגבוה המסך */
+.main-nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
-h1 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.container > p {
-    text-align: right;
-    color: #555;
-    font-size: 1.1em;
-}
-
-.mistake-card {
+.main-nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: row-reverse;
-    background-color: #fefefe;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    cursor: pointer;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    justify-content: center;
+}
+.main-nav ul li {
+    position: relative; 
+}
+.main-nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.main-nav ul li a:hover {
+    background-color: #555;
 }
 
-.mistake-card:hover {
-    transform: scale(1.02);
-}
-
-.mistake-card img {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.text {
-    padding: 20px;
-    flex-grow: 1;
-    direction: rtl;
-    text-align: right;
-}
-
-.text h2 {
-    margin: 0 0 5px;
-    color: #34495e;
-}
-
-.reminder {
-    font-size: 0.9em;
-    color: #999;
-    margin-bottom: 10px;
-}
-
-.explanation {
+/* תת-תפריט  */
+.main-nav ul ul {
     display: none;
-    color: #555;
-    line-height: 1.5;
+    position: absolute;
+    top: 100%; /* מתחת לפריט */
+    right: 0;
+    background-color: #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    z-index: 1001;
+}
+.main-nav ul ul li a {
+    padding: 10px 20px;
+    color: #fff;
+}
+.main-nav ul ul li a:hover {
+    background-color: #555;
+}
+
+.main-nav ul li:hover > ul {
+    display: block;
 }
