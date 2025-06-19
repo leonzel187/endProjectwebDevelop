@@ -212,3 +212,113 @@ body {
 .main-nav ul li:hover > ul {
     display: block;
 }
+
+/* ==========================================
+   הגדרות כלליות לדף צור קשר ולתוכן
+   ========================================== */
+body {
+    font-family: Arial, sans-serif;    
+    background: #f2f6f8;              
+    color: #333;
+    line-height: 1.6;
+    direction: rtl;                   
+}
+#container {
+    max-width: 600px;                  
+    margin: 0 auto;                    
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+header {
+    background: linear-gradient(135deg, #04161e, #004c99); 
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #fff;
+}
+main {
+    padding: 30px 20px;
+}
+
+
+/* contact us leon section*/
+#contactForm {
+    display: flex;
+    flex-direction: column;            
+    gap: 20px;                        
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #04161e;                   
+}
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 1px solid #cad1d8;        
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2a3747;             
+    outline: none;
+}
+
+#contactForm button[type="submit"] {
+    align-self: flex-start;            
+    background: #3d434a;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#contactForm button[type="submit"]:hover {
+    background: #0055a3;               
+}
+
+/* ==========================================
+   סגנון הודעת אישור (Confirmation)
+   ========================================== */
+#confirmation {
+    display: none;                     
+    text-align: center;
+    padding: 30px 20px;
+}
+#confirmation h2 {
+    color: #28a745;                   
+    margin-bottom: 10px;
+}
+#confirmation p {
+    color: #555;
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 100px 15px 15px;       
+    }
+    header h1 {
+        font-size: 1.5rem;              
+    }
+    #container {
+        margin: 20px auto;
+    }
+    #contactForm button[type="submit"] {
+        width: 100%;                    
+        text-align: center;
+    }
+}
