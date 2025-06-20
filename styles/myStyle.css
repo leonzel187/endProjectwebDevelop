@@ -215,7 +215,7 @@ body {
 
 /* ==========================================
    הגדרות כלליות לדף צור קשר ולתוכן
-   ========================================== */
+   ========================================== 
 body {
     font-family: Arial, sans-serif;    
     background: #f2f6f8;              
@@ -237,7 +237,7 @@ header {
     text-align: center;
 }
 header h1 {
-    margin: 0;
+    margin: 20px 0;
     font-size: 1.8rem;
     color: #fff;
 }
@@ -287,7 +287,7 @@ main {
     transition: background 0.3s;
 }
 #contactForm button[type="submit"]:hover {
-    background: #0055a3;               
+    background: #2a3747;               
 }
 
 /* ==========================================
@@ -320,5 +320,74 @@ main {
     #contactForm button[type="submit"] {
         width: 100%;                    
         text-align: center;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+.hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.btn-primary {
+    display: inline-block;
+    background: #ff9f1c;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.btn-primary:hover {
+    background: #ff7f00;
+}
+
+/* רספונסיבי */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
     }
 }
