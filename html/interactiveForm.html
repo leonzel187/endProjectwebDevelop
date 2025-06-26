@@ -16,7 +16,7 @@
 </head>
 <body>
 <header>
-    <h1>צור קשר</h1>
+    <h1>טופס אינטרקאטיבי</h1>
     <nav class="main-nav">
         <ul>
             <li><a href="../index.html">דף בית</a></li>
@@ -35,8 +35,37 @@
     </nav>
 </header>
 <main>
-    <div id="container">
-
+    <div id="container"> <!-- TODO: make nicely sectioned in grid-->
+        <form id="interactiveForm">
+            <div class="form-group">
+                    <label for="dogName">מה השם של הכלב/ה המתוק/ה שלכם?</label>
+                    <input type="text" id="dogName" placeholder="שם הכלב">
+                
+            </div>
+            <div class="form-group">
+                    <h3 id="dogSizeHeader">באיזה גודל?</h3>
+                    <input type="radio" id="extraSmall" name="dogSize" value="extraSmall" onclick="setSize(this.value)"> <!-- TODO: fix spacing-->
+                    <label for="extraSmall">אקסטרה קטן (XS)</label>
+                    <input type="radio" id="small" name="dogSize" value="small" onclick="setSize(this.value)">
+                    <label for="small">קטן (S)</label>
+                    <input type="radio" id="medium" name="dogSize" value="medium" onclick="setSize(this.value)">
+                    <label for="medium">בינוני (M)</label>
+                    <input type="radio" id="large" name="dogSize" value="large" onclick="setSize(this.value)">
+                    <label for="large">גדול (L)</label>
+            </div>
+            <div class="form-group">
+                <h3 id="favFood">אוכל אהוב?</h3>
+                <input type="checkbox" id="snack1" name="favFood" value="snack1" onclick="setFood(this.value)" <!-- TODO: fix spacing-->
+                <label for="snack1">snack1</label>
+                <input type="checkbox" id="snack2" name="favFood" value="snack2" onclick="setFood(this.value)">
+                <label for="snack2">snack2</label>
+                <input type="checkbox" id="snack3" name="favFood" value="snack3" onclick="setFood(this.value)">
+                <label for="snack3">snack3</label>
+                <input type="checkbox" id="snack4" name="favFood" value="snack4" onclick="setFood(this.value)">
+                <label for="snack4">snack4</label>
+            </div>
+            <input type="button" id="submit" value="שליחה" onClick="submit">
+        </form>
     </div>
 </main>
 </body>
