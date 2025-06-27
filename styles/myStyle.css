@@ -516,18 +516,60 @@ main {
     opacity: 0;
     background-color: skyblue;
 }
-
-#showImages {
-    background-color: #f5f7fa;
-}
-
-#dogSizeImage {
-    width: 100px;
-    height: auto;
-    
-}
 .checkbox-image {
     opacity: 0.5;
     width: auto;
     height: 150px;
+}
+
+/* ====== מכולת showImages כגריד דו־עמודי ====== */
+#showImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* שני כרטיסים שווים: חטיפים משמאל, כלב מימין */
+    gap: 16px;                       /* ריווח בין הכרטיסים */
+    padding: 16px;
+}
+
+/* ====== עיצוב הכרטיסים (משותף) ====== */
+#showImages .snack-results,
+#showImages .dog-results {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+}
+
+/* ====== גריד פנימי לחטיפים ====== */
+#showImages .snack-results {
+    grid-auto-flow: column;           /* סדר אופקי של האייקונים */
+    grid-auto-columns: 60px;          /* רוחב קבוע לכל תמונה */
+    justify-content: start;           /* מתחיל משמאל */
+    align-items: center;
+}
+
+#showImages .snack-results img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ====== גריד פנימי לכלבות ====== */
+#showImages .dog-results {
+    grid-template-rows: auto;         /* שורה אחת, אך אם יהיו יותר פריטים זה יתפרש למטה */
+    justify-items: center;            /* מרכז אופקית כל הפריטים */
+    align-items: center;
+}
+
+#showImages .dog-results h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#showImages .dog-results img {
+    width: 60px;                      /* רוחב קטן קבוע */
+    height: auto;
+    object-fit: contain;
 }

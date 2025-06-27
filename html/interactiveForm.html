@@ -47,13 +47,13 @@
                 <div class="form-group option-box">
                         <h3 id="dogSizeHeader">באיזה גודל? *</h3>
                     <div class="radio-group">
-                        <input type="radio" id="extraSmall" name="dogSize" value="extraSmall" oninput="setSize(this.value)" required>
+                        <input type="radio" id="extraSmall" name="dogSize" value="xs-dog" oninput="setSize(this.value)" required>
                         <label for="extraSmall">אקסטרה קטן (XS)</label>
-                        <input type="radio" id="small" name="dogSize" value="small" oninput="setSize(this.value)">
+                        <input type="radio" id="small" name="dogSize" value="s-dog" oninput="setSize(this.value)">
                         <label for="small">קטן (S)</label>
-                        <input type="radio" id="medium" name="dogSize" value="medium" oninput="setSize(this.value)">
+                        <input type="radio" id="medium" name="dogSize" value="m-dog" oninput="setSize(this.value)">
                         <label for="medium">בינוני (M)</label>
-                        <input type="radio" id="large" name="dogSize" value="large" oninput="setSize(this.value)">
+                        <input type="radio" id="large" name="dogSize" value="l-dog" oninput="setSize(this.value)">
                         <label for="large">גדול (L)</label>
                     </div>
                 </div>
@@ -75,16 +75,23 @@
             </form>
         </div>
         <div id="showImages">
-            <h2 id="dogNameDisplay">הכלב שלי</h2>
-            <img src="" alt="" id="dogSizeImage">
-            <br />
-            <img src="../images/interactiveForm/peanutButter.png" alt="peanutButter, unselected" id="peanutButterImage" class="checkbox-image">
-            <img src="../images/interactiveForm/meat.png" alt="meat, unselected" id="meatImage" class="checkbox-image">
-            <img src="../images/interactiveForm/bonzo.png" alt="bonzo, unselected" id="bonzoImage" class="checkbox-image">
-<!--            <img src="" alt="peanutButter, unselected" id="peanutButterImage" class="checkbox-image">-->
-<!--            <img src="" alt="meat, unselected" id="meatImage" class="checkbox-image">-->
-<!--            <img src="" alt="bonzo, unselected" id="bonzoImage" class="checkbox-image">-->
+            <!-- 1. החטיפים בעמודה השמאלית -->
+            <div class="snack-results">
+                <img src="../images/interactiveForm/peanutButter.png"
+                     alt="חמאת בוטנים" id="peanutButterImage" class="checkbox-image">
+                <img src="../images/interactiveForm/meat.png"
+                     alt="בשר" id="meatImage" class="checkbox-image">
+                <img src="../images/interactiveForm/bonzo.png"
+                     alt="בונזו" id="bonzoImage" class="checkbox-image">
+            </div>
+
+            <!-- 2. הכלב בעמודה הימנית -->
+            <div class="dog-results">
+                <h2 id="dogNameDisplay">הכלב שלי</h2>
+                <img src="" alt="גודל כלב" id="dogSizeImage">
+            </div>
         </div>
+
     </div>
     
     
