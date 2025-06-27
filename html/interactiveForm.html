@@ -35,37 +35,66 @@
     </nav>
 </header>
 <main>
-    <div id="container"> <!-- TODO: make nicely sectioned in grid-->
-        <form id="interactiveForm">
-            <div class="form-group">
-                    <label for="dogName">מה השם של הכלב/ה המתוק/ה שלכם?</label>
-                    <input type="text" id="dogName" placeholder="שם הכלב">
+    <div id="container" class="option-grid">
+        <div id="formContainer">
+            <form id="interactiveForm" onsubmit="return false">
+                <div class="form-group">
+                        <label for="dogName">מה השם של הכלב/ה המתוק/ה שלכם? *</label>
+                        <input id="dogName" placeholder="שם הכלב" oninput="updateDogName(this.value)" required>
+                    
+                </div>
                 
-            </div>
-            <div class="form-group">
-                    <h3 id="dogSizeHeader">באיזה גודל?</h3>
-                    <input type="radio" id="extraSmall" name="dogSize" value="extraSmall" onclick="setSize(this.value)"> <!-- TODO: fix spacing-->
-                    <label for="extraSmall">אקסטרה קטן (XS)</label>
-                    <input type="radio" id="small" name="dogSize" value="small" onclick="setSize(this.value)">
-                    <label for="small">קטן (S)</label>
-                    <input type="radio" id="medium" name="dogSize" value="medium" onclick="setSize(this.value)">
-                    <label for="medium">בינוני (M)</label>
-                    <input type="radio" id="large" name="dogSize" value="large" onclick="setSize(this.value)">
-                    <label for="large">גדול (L)</label>
-            </div>
-            <div class="form-group">
-                <h3 id="favFood">אוכל אהוב?</h3>
-                <input type="checkbox" id="snack1" name="favFood" value="snack1" onclick="setFood(this.value)" <!-- TODO: fix spacing-->
-                <label for="snack1">snack1</label>
-                <input type="checkbox" id="snack2" name="favFood" value="snack2" onclick="setFood(this.value)">
-                <label for="snack2">snack2</label>
-                <input type="checkbox" id="snack3" name="favFood" value="snack3" onclick="setFood(this.value)">
-                <label for="snack3">snack3</label>
-                <input type="checkbox" id="snack4" name="favFood" value="snack4" onclick="setFood(this.value)">
-                <label for="snack4">snack4</label>
-            </div>
-            <input type="button" id="submit" value="שליחה" onClick="submit">
-        </form>
+                <div class="form-group option-box">
+                        <h3 id="dogSizeHeader">באיזה גודל? *</h3>
+                    <div class="radio-group">
+                        <input type="radio" id="extraSmall" name="dogSize" value="extraSmall" oninput="setSize(this.value)" required>
+                        <label for="extraSmall">אקסטרה קטן (XS)</label>
+                        <input type="radio" id="small" name="dogSize" value="small" oninput="setSize(this.value)">
+                        <label for="small">קטן (S)</label>
+                        <input type="radio" id="medium" name="dogSize" value="medium" oninput="setSize(this.value)">
+                        <label for="medium">בינוני (M)</label>
+                        <input type="radio" id="large" name="dogSize" value="large" oninput="setSize(this.value)">
+                        <label for="large">גדול (L)</label>
+                    </div>
+                </div>
+                <div class="form-group option-box">
+                    <h3 id="favFood">אוכל אהוב?</h3>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="peanutButter" name="favFood" value="peanutButter" oninput="setFood(this.value)">
+                            <label for="peanutButter">חמאת בוטנים</label>
+                            <input type="checkbox" id="meat" name="favFood" value="meat" oninput="setFood(this.value)">
+                            <label for="meat">בשר</label>
+                            <input type="checkbox" id="bonzo" name="favFood" value="bonzo" oninput="setFood(this.value)">
+                            <label for="bonzo">בונזו</label>
+                        </div>
+                </div>
+                <div class="form-group option-box">
+<!--                    <input type="button" id="submit" onclick="submitForm()" value="שליחה">-->
+                    <button type="submit" onclick="submitForm()">שליחה</button>
+                </div>
+            </form>
+        </div>
+        <div id="showImages">
+            <h2 id="dogNameDisplay">הכלב שלי</h2>
+            <img src="" alt="" id="dogSizeImage">
+            <br />
+            <img src="../images/interactiveForm/peanutButter.png" alt="peanutButter, unselected" id="peanutButterImage" class="checkbox-image">
+            <img src="../images/interactiveForm/meat.png" alt="meat, unselected" id="meatImage" class="checkbox-image">
+            <img src="../images/interactiveForm/bonzo.png" alt="bonzo, unselected" id="bonzoImage" class="checkbox-image">
+<!--            <img src="" alt="peanutButter, unselected" id="peanutButterImage" class="checkbox-image">-->
+<!--            <img src="" alt="meat, unselected" id="meatImage" class="checkbox-image">-->
+<!--            <img src="" alt="bonzo, unselected" id="bonzoImage" class="checkbox-image">-->
+        </div>
+    </div>
+    
+    
+    <div id="showSubmit">
+        <h3>סיכום הפנייה</h3>
+        <span id="dogNameSubmit"></span> 
+        <br />
+        <span id="sizeSubmit"></span>
+        <br />
+        <span id="favFoodSubmit"></span>
     </div>
 </main>
 </body>

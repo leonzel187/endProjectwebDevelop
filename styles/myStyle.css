@@ -458,3 +458,76 @@ main {
     padding-right: 10px;
     border-right: 2px solid #e0e0e0;
 }
+
+/* Interactive form css code   */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;  /* עמודה שמאלית צרה לעמודה ראשית רחבה */
+    gap: 16px;
+    padding: 16px;
+}
+
+#container {
+    display: contents;
+}
+
+#showImages {
+    grid-column: 2;   /* יהיה בעמודה הראשונה (שמאל) */
+}
+
+#formContainer {
+    grid-column: 1;   /* יהיה בעמודה השנייה (ימין) */
+}
+
+#showSubmit {
+    grid-column: 2;
+}
+
+
+.option-box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/*.option-box h3,*/
+/*.option-box label {*/
+/*    margin-bottom: 8px;*/
+/*    font-weight: 600;*/
+/*}*/
+
+.radio-group, .checkbox-group {
+    /*display: flow;*/
+    /*flex-direction: row;*/
+    cursor: pointer;
+}
+
+.radio-group input ,.checkbox-group input {
+    cursor: pointer;
+}
+
+#showSubmit {
+    opacity: 0;
+    background-color: skyblue;
+}
+
+#showImages {
+    background-color: #f5f7fa;
+}
+
+#dogSizeImage {
+    width: 100px;
+    height: auto;
+    
+}
+.checkbox-image {
+    opacity: 0.5;
+    width: auto;
+    height: 150px;
+}
