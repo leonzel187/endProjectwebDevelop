@@ -518,8 +518,8 @@ main {
 }
 .checkbox-image {
     opacity: 0.5;
-    width: auto;
-    height: 150px;
+    /*width: auto;*/
+    /*height: 150px;*/
 }
 
 /* ====== מכולת showImages כגריד דו־עמודי ====== */
@@ -539,19 +539,19 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 16px;
     display: grid;
-    gap: 100px;
+    gap: 5%;
 }
 
 /* ====== גריד פנימי לחטיפים ====== */
 #showImages .snack-results {
     grid-auto-flow: column;           /* סדר אופקי של האייקונים */
-    grid-auto-columns: 60px;          /* רוחב קבוע לכל תמונה */
+    grid-auto-columns: 200fr;
     justify-content: start;           /* מתחיל משמאל */
     align-items: center;
 }
 
 #showImages .snack-results img {
-    width: 200%;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -569,7 +569,5 @@ main {
 }
 
 #showImages .dog-results img {
-    /*width: 60px;                      !* רוחב קטן קבוע *!*/
-    /*height: auto;*/
     object-fit: contain;
 }
