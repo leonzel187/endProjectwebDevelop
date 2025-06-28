@@ -35,7 +35,12 @@ function submitForm() {
 }
 
 function updateDogName (input) {
-    document.getElementById('dogNameDisplay').innerHTML = "הכלב שלי: " + input;
+    if (input && !dogName.trim()) {
+        document.getElementById('dogNameDisplay').innerHTML = "הכלב שלי: " + input;
+    }
+    else {
+        document.getElementById('dogNameDisplay').innerHTML = "הכלב שלי";
+    }
 }
 
 function getFavFoods() {
