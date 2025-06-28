@@ -22,6 +22,11 @@ function submitForm() {
     const size = document.querySelector('input[name="dogSize"]:checked').labels[0].innerHTML;
     const favFoods = getFavFoods();
     
+    // Validity Check
+    if (dogName && !dogName.trim()){ //Check if dogName is empty and also not just whitespace
+        return false //Invalidity will be displayed with the "required" field
+    }
+    
     document.getElementById('dogNameSubmit').innerText = 'שם הכלב: ' + dogName;
     document.getElementById('sizeSubmit').innerText = 'גודל הכלב: ' + size;
     document.getElementById('favFoodSubmit').innerText = 'מאכל/ים מועדפים: ' + favFoods;
@@ -37,9 +42,7 @@ function getFavFoods() {
     const favFoodElements = document.getElementsByName("favFood");
     let favFoods = "";
     for (let i = 0; i < favFoodElements.length; i++) {
-        console.log(favFoodElements[i]);
         let favFoodElement = favFoodElements[i];
-        console.log(favFoodElement);
         if (favFoodElement.checked) {
             if (favFoods !== "") {
                 favFoods += ", ";
